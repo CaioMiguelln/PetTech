@@ -48,81 +48,103 @@ main { flex: 1 0 auto; }
 .btn:hover { opacity: 0.8; }
 
 main {
-        flex-grow: 1;
+    padding: 2rem 1rem;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-        padding: 2rem 1rem;
 }
-.login-container {
-    background-color: #ffffff;
+
+.form-section {
+    background: #ffffff;
+    width: 95%;
+    max-width: 850px;
+    margin: 1rem 0;
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    border: 1px solid #ddd;
 }
 
-.login-container h2 {
+.form-section h2 {
     text-align: center;
-        color: #0055c0;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    color: #4e9bff;
     font-size: 1.8rem;
 }
 
-.input-group {
-    margin-bottom: 1.25rem;
+.form-pet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem 2rem;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 0.5rem;
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
     font-weight: 600;
+    margin-bottom: 0.5rem;
     color: #4b4f56;
 }
 
-.input-group input {
+.form-group input,
+.form-group select {
     width: 100%;
     padding: 0.8rem;
     font-size: 1rem;
     border: 1px solid #dddfe2;
     border-radius: 6px;
+    background-color: #fff;
 }
 
-.input-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
     outline: none;
-    border-color: #0055c0;
+    border-color: #4e9bff;
     box-shadow: 0 0 0 2px rgba(78, 155, 255, 0.25);
 }
-.login-button {
+
+.form-group.separator {
+    grid-column: 1 / -1;
+    border-top: 1px dashed #ccc;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: #4e9bff;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn.cadastrar {
+    grid-column: 1 / -1;
     width: 100%;
     padding: 0.9rem;
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
-    background-color: #0055c0;
+    background-color: #4e9bff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem;
 }
 
-.login-button:hover {
+.btn.cadastrar:hover {
     background-color: #2e7eea;
 }
-
-.links {
-    text-align: center;
-    margin-top: 1.5rem;
+ 
+@media (max-width: 768px) {
+    .form-pet {
+        grid-template-columns: 1fr;
+        gap: 1.2rem 0;
+    }
 }
 
-.links a {
-    color: #4e9bff;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.links a:hover {
-    text-decoration: underline;
+@media (max-width: 480px) {
+    .form-section {
+        padding: 1.5rem;
+    }
 }

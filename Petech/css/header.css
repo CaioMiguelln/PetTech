@@ -1,0 +1,84 @@
+
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  max-width: none;
+  max-height: 64px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transform: scale(1.5);
+  transform-origin: left center;
+}
+
+.logobtn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .logo {
+  max-height: 64px;
+  width: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #e3f1ff;
+}
+
+.menu a.active {
+  color: #ffc107;
+  border-bottom: 2px solid #ffc107;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    max-height: 48px;
+    width: auto;
+    transform: scale(1.15);
+    transform-origin: left center;
+  }
+}

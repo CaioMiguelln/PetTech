@@ -1,98 +1,85 @@
-/* --- RESET BÁSICO E FONTES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif; /* Fonte do seu site "Pet-Tech" */
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --color-primary: #0055c0;
+    --color-primary-2: #4e9bff;
+    --color-primary-hover: #2e7eea;
+    --color-accent: #ffc107;
+    --color-danger: #dc3545;
+    --color-text: #333;
+    --color-text-muted: #555;
+    --color-bg: #fafafa;
+    --color-white: #ffffff;
+
+    --shadow-1: 0 1px 4px rgba(0, 0, 0, 0.1);
+    --shadow-2: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --radius-1: 8px;
+    --radius-2: 10px;
 }
 
 body {
-    background-color: #fafafa; /* Fundo branco/cinza padrão */
-    color: #333;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
-/* --- ESTILOS DO HEADER (Copiado do seu site) --- */
-header {
-    background-color: #0055c0;
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-    width: 90%;
-    margin: auto;
+html, body { height: 100%; }
+body {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
+main { flex: 1 0 auto; }
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: 700;
+.btn {
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+    transition: opacity 0.3s;
 }
+.btn:hover { opacity: 0.8; }
 
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 1.2rem;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.menu a:hover {
-    color: #e3f1ff;
-}
-
-/* --- LAYOUT DO CONTEÚDO PRINCIPAL (MAIN) --- */
 main {
     width: 100%;
-    padding-bottom: 3rem; /* Espaço antes do rodapé */
+    padding-bottom: 3rem;
 }
 
-/* --- ESTILOS DA SEÇÃO "SOBRE" --- */
-/* Esta é a seção principal com fundo azul claro */
 .about {
-    background-color: #f2f6ff; /* Fundo azul bem claro */
-    padding: 3rem 1.5rem;
+    background-color: #f2f6ff;
+    padding: 3rem 1rem 1rem;
     text-align: center;
-    border-top: 1px solid #e0e0e0;
+    border-top: none;
 }
 
 .about h2 {
-    color: #4e9bff; /* Cor azul do seu site */
+    color: #4e9bff;
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
 }
 
-/* Container flex para os blocos */
 .about-content {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Espaço entre os blocos */
+    gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
-    text-align: left; /* Alinha o texto dos blocos à esquerda */
+    text-align: left;
 }
 
-/* O estilo do "Card de Reflexão" */
 .reflection-block {
-    flex: 1; /* Faz os blocos dividirem o espaço igualmente */
+    flex: 1;
     background: #ffffff;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    
-    /* O detalhe visual chave: borda amarela */
     border-left: 5px solid #ffc107; 
 }
 
@@ -105,30 +92,7 @@ main {
     font-size: 0.95rem;
     color: #555;
 }
-
-
-/* --- ESTILOS DO FOOTER (Copiado do seu site) --- */
-footer {
-    text-align: center;
-    background-color: #0055c0;
-    color: white;
-    padding: 1.2rem;
-    font-size: 0.9rem;
-}
-
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-    /* Menu */
-    .menu {
-        flex-direction: column;
-        text-align: center;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    /* Faz os blocos de reflexão empilharem */
     .about-content {
         flex-direction: column;
         gap: 1.5rem;
