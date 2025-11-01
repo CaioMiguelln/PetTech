@@ -1,0 +1,171 @@
+/* --- RESET BÁSICO E FONTES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Fonte do seu site "Pet-Tech" */
+}
+
+/* Layout principal com Flexbox:
+  - Garante que a página ocupe 100% da altura
+  - Empurra o rodapé para o final
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Fundo cinza claro (do 1º exemplo) */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ESTILOS DO HEADER (Copiado do seu CSS) --- */
+header {
+    background-color: #0055c0;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #e3f1ff;
+}
+
+/* --- LAYOUT DO CONTEÚDO PRINCIPAL (MAIN) ---
+  - Faz o 'main' crescer para ocupar o espaço vago
+  - Centraliza o cartão de login dentro dele
+*/
+main {
+    flex-grow: 1; /* Faz o main ocupar o espaço entre header e footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem; /* Espaçamento para telas menores */
+}
+
+/* --- ESTILOS DO CARTÃO DE LOGIN (Baseado no 1º exemplo) --- */
+.login-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #0055c0; /* Cor azul do seu site */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4b4f56;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0055c0; /* Cor azul do seu site */
+    box-shadow: 0 0 0 2px rgba(78, 155, 255, 0.25);
+}
+
+/* Botão de login com o estilo do seu site */
+.login-button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0055c0; /* Cor azul do seu site */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login-button:hover {
+    background-color: #2e7eea; /* Cor hover do seu site */
+}
+
+.links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.links a {
+    color: #4e9bff; /* Cor azul do seu site */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILOS DO FOOTER (Copiado do seu CSS) --- */
+footer {
+    text-align: center;
+    background-color: #0055c0;
+    color: white;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    /* margin-top: 3rem; foi removido, pois o flexbox já o posiciona */
+}
+
+/* --- RESPONSIVIDADE (Apenas para o menu) --- */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}

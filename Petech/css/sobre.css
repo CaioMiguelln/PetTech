@@ -1,0 +1,136 @@
+/* --- RESET BÁSICO E FONTES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Fonte do seu site "Pet-Tech" */
+}
+
+body {
+    background-color: #fafafa; /* Fundo branco/cinza padrão */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ESTILOS DO HEADER (Copiado do seu site) --- */
+header {
+    background-color: #0055c0;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #e3f1ff;
+}
+
+/* --- LAYOUT DO CONTEÚDO PRINCIPAL (MAIN) --- */
+main {
+    width: 100%;
+    padding-bottom: 3rem; /* Espaço antes do rodapé */
+}
+
+/* --- ESTILOS DA SEÇÃO "SOBRE" --- */
+/* Esta é a seção principal com fundo azul claro */
+.about {
+    background-color: #f2f6ff; /* Fundo azul bem claro */
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.about h2 {
+    color: #4e9bff; /* Cor azul do seu site */
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+}
+
+/* Container flex para os blocos */
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Espaço entre os blocos */
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left; /* Alinha o texto dos blocos à esquerda */
+}
+
+/* O estilo do "Card de Reflexão" */
+.reflection-block {
+    flex: 1; /* Faz os blocos dividirem o espaço igualmente */
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    
+    /* O detalhe visual chave: borda amarela */
+    border-left: 5px solid #ffc107; 
+}
+
+.reflection-block h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.reflection-block p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+/* --- ESTILOS DO FOOTER (Copiado do seu site) --- */
+footer {
+    text-align: center;
+    background-color: #0055c0;
+    color: white;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    /* Menu */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Faz os blocos de reflexão empilharem */
+    .about-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

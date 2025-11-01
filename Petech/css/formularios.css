@@ -1,0 +1,185 @@
+/* --- RESET BÁSICO E FONTES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Fonte do seu site "Pet-Tech" */
+}
+
+body {
+    background-color: #f0f2f5; /* Fundo cinza claro */
+    color: #333;
+    line-height: 1.6;
+    /* Removemos o 'display:flex' para o conteúdo fluir normalmente */
+}
+
+/* --- ESTILOS DO HEADER (Copiado do seu site) --- */
+header {
+    background-color: #4e9bff;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #e3f1ff;
+}
+
+/* --- LAYOUT DO CONTEÚDO PRINCIPAL (MAIN) --- */
+main {
+    padding: 2rem 1rem; /* Espaçamento geral */
+    width: 100%;
+    display: flex; /* Para centralizar o form-section */
+    justify-content: center;
+}
+
+/* --- ESTILOS DO FORMULÁRIO DE CADASTRO --- */
+.form-section {
+    background: #ffffff;
+    width: 95%;
+    max-width: 850px; /* Largura máxima para o formulário */
+    margin: 1rem 0; /* Margem vertical */
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4e9bff; /* Cor azul do seu site */
+    font-size: 1.8rem;
+}
+
+/* O grid de 2 colunas do seu CSS original */
+.form-pet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem 2rem; /* Espaçamento entre linhas e colunas */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #4b4f56;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    background-color: #fff; /* Garante fundo branco para o select */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4e9bff; /* Cor azul do seu site */
+    box-shadow: 0 0 0 2px rgba(78, 155, 255, 0.25);
+}
+
+/* Estilo do Separador */
+.form-group.separator {
+    grid-column: 1 / -1; /* Ocupa as duas colunas */
+    border-top: 1px dashed #ccc;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: #4e9bff;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Estilo do Botão de Cadastro */
+.btn.cadastrar {
+    grid-column: 1 / -1; /* Ocupa as duas colunas */
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #4e9bff; /* Cor azul do seu site */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem;
+}
+
+.btn.cadastrar:hover {
+    background-color: #2e7eea; /* Cor hover do seu site */
+}
+
+
+/* --- ESTILOS DO FOOTER (Copiado do seu site) --- */
+footer {
+    text-align: center;
+    background-color: #4e9bff;
+    color: white;
+    padding: 1.2rem;
+    margin-top: 2rem; /* Garante um espaço acima do rodapé */
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    /* Menu */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* Formulário vira coluna única */
+    .form-pet {
+        grid-template-columns: 1fr;
+        gap: 1.2rem 0; /* Remove espaçamento da coluna */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section {
+        padding: 1.5rem; /* Menos padding em telas pequenas */
+    }
+}

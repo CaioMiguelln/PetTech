@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet-Tech: Cadastro</title>
+    
+    <link rel="stylesheet" href="../css/formularios.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+           <button type="image" class="logobtn">
+                <img src="./assest/content2.png" alt="Pet-Tech Logo" class="logo">
+            </button>
+            <ul class="menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="listar.html">Listar Pets</a></li>
+                <li><a href="cadastrar.html">Cadastrar</a></li>
+                <li><a href="login.html">Login</a></li> <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cadastrar" class="form-section">
+            <h2>Cadastrar Novo Pet</h2>
+            
+            <form id="formPet" class="form-pet">
+                
+                <div class="form-group">
+                    <label for="pet-nome">Nome do Pet</label>
+                    <input type="text" id="pet-nome" name="pet-nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pet-especie">Espécie</label>
+                    <select id="pet-especie" name="pet-especie">
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pet-raca">Raça</label>
+                    <input type="text" id="pet-raca" name="pet-raca">
+                </div>
+                
+                <div class="form-group">
+                    <label for="pet-idade">Idade (anos)</label>
+                    <input type="number" id="pet-idade" name="pet-idade">
+                </div>
+
+                <div class="form-group separator">
+                    Dados do Dono (Cliente)
+                </div>
+
+                <div class="form-group">
+                    <label for="dono-nome">Nome do Dono</label>
+                    <input type="text" id="dono-nome" name="dono-nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dono-telefone">Telefone / WhatsApp</label>
+                    <input type="tel" id="dono-telefone" name="dono-telefone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dono-email">Email de Contato</label>
+                    <input type="email" id="dono-email" name="dono-email">
+                </div>
+
+                <div class="form-group">
+                    <label for="dono-cpf">CPF do Dono</label>
+                    <input type="text" id="dono-cpf" name="dono-cpf">
+                </div>
+
+                <button type="submit" class="btn cadastrar">Cadastrar Pet e Dono</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pet-Tech. Trabalho Integrador de POO e Métodos Ágeis.</p>
+    </footer>
+</body>
+
+</html>
