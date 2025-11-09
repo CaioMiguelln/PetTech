@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet-Tech: Listagem de Pets</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/listar.css">
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main>
+        <section id="listar" class="list-section">
+            <h2>Lista de Pets Cadastrados</h2>
+
+            <div class="filter-bar">
+
+                <div class="filter-group">
+                    <label for="filtro-nome">Pesquisar por Nome do Pet:</label>
+                    <input type="text" id="filtro-nome" placeholder="Ex: Rex">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filtro-dono">Pesquisar por Dono:</label>
+                    <input type="text" id="filtro-dono" placeholder="Ex: Gustavo">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filtro-idade">Idade Mínima:</label>
+                    <input type="number" id="filtro-idade" placeholder="Ex: 2">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filtro-especie">Filtrar por Espécie:</label>
+                    <select id="filtro-especie">
+                        <option value="todos">Todas</option>
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filtro-status">Filtrar por Status:</label>
+                    <select id="filtro-status">
+                        <option value="todos">Todos</option>
+                        <option value="emconsulta">Em Consulta</option>
+                        <option value="aguardando">Aguardando Atendimento</option>
+                        <option value="atendido">Atendido</option>
+                    </select>
+                </div>
+
+                <button class="btn aplicar-filtro">Aplicar Filtros</button>
+            </div>
+            <table class="pets-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Espécie</th>
+                        <th>Idade</th>
+                        <th>Status</th>
+                        <th>Nome do Dono</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="8">Carregando...</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div id="site-footer"></div>
+    <script src="../script.js"></script>
+    <script src="../api.js"></script>
+</body>
+
+</html>
